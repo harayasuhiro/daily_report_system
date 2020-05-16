@@ -22,7 +22,7 @@
                             <th>権限</th>
                             <td>
                             <c:choose>
-                                    <c:when test="${employee.admin_flag == 1}"></c:when>
+                                    <c:when test="${employee.admin_flag == 1}">管理者</c:when>
                                     <c:otherwise>一般</c:otherwise>
                             </c:choose></td>
                         </tr>
@@ -42,7 +42,7 @@
                 </table>
 
                 <p>
-                    <a href="<c:url value='/employees/edit?id=$(employee.id)' />">この従業員情報を編集する</a>
+                    <a href="<c:url value='/employees/edit?id=${employee.id}' />">この従業員情報を編集する</a>
                 </p>
 
             </c:when>
