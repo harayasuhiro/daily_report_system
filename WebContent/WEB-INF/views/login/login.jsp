@@ -4,7 +4,7 @@
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
         <c:if test="${hasError}">
-            <div id="flush_error">社員番号かパスワードが間違っています。</div>
+                <div id="flush_error">社員番号かパスワードが間違っています。</div>
         </c:if>
         <c:if test="${flush != null}">
             <div id="flush_success">
@@ -14,10 +14,9 @@
         <h2>ログイン</h2>
         <form method="POST" action="<c:url value='/login' />">
             <label for="code">社員番号</label><br /> <input type="text" name="code"
-                value="${code}" /> <br />
-            <br /> <label for="password">パスワード</label><br /> <input
-                type="password" name="password" /> <br />
-            <br /> <input type="hidden" name="_token" value="${_token}" />
+                value="${code}" /> <br /> <br /> <label for="password">パスワード</label><br />
+            <input type="password" name="password" /> <br /> <br /> <input
+                type="hidden" name="_token" value="${_token}" />
             <button type="submit">ログイン</button>
         </form>
     </c:param>
